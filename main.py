@@ -10,7 +10,7 @@ with sidebar:
     for x in Verified_artists:
         sidebar.write(x)
 with released_music:
-    released_music.subheader("Closest artist to me")
+    released_music.subheader("Closest artist")
     Artist = st.text_area('Enter Artist here', value='Wale')
     start  = st.button("Find my Comparison")
     if start:
