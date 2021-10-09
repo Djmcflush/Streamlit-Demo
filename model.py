@@ -37,7 +37,7 @@ data_transformer = MinMaxScaler()
 raw_data = pd.read_csv('Verified_artists.csv')
 raw_data.drop(columns=['identity','Song_Name'], inplace=True)
 data_transformer.fit(raw_data)
-data_transformer = joblib.load(scaler_path)
+#data_transformer = joblib.load(scaler_path)
 app = FastAPI()
 
 Verified_artists = ['Ariana Grande'
