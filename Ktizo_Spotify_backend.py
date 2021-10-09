@@ -3,10 +3,7 @@ import numpy as np
 import spotipy
 import json
 from spotipy.oauth2 import SpotifyClientCredentials
-
-client_id = 'd7989c7227bd4d06b83f94e9d55b1597'#; // Your client id
-client_secret = '5e5b3c3c46f240cea016773789d0b73e'#; // Your secret
-oath = 'BQBXA0YYt2LN2ecdTbkLGpBNU7ZuUJsfykzbYmWyhC994y0UnzLBSzy3DA6wasm5OIt_K0UvzpqXTJ0C04vbtN3VtZ9dOsdduP1SowucpjqsV_CVY3lq3F8MuQz9XfVzR7dzIsko0MSUHhYOw_OaRXDG95DUKQ0_bpo'
+from client.py import client_id, client_secret, oath
 
 
 client_credentials_manager = SpotifyClientCredentials(client_id=client_id,client_secret=client_secret)
