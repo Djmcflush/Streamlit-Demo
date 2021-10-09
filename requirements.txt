@@ -1,0 +1,10 @@
+streamlit==1.0.0
+tensorflow_similarity==0.13.36
+pandas==1.1.2
+tensorflow==2.6.0
+spotipy==2.19.0
+requests==2.25.1
+joblib==0.17.0
+uvicorn==0.15.0
+numpy==1.19.2
+fastapi==0.70.0
