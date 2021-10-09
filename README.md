@@ -13,5 +13,7 @@ Clone the repository
 3. streamlit run main.py
 4. Open Streamlit in your local Broswer (http://localhost:8501/)
 
+Test out the FastAPI using http://127.0.0.1:8000/docs
+
 Or Access the application via :
 weblink
