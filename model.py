@@ -18,6 +18,7 @@ from Ktizo_Spotify_backend import Get_artist
 import joblib
 from tensorflow.keras.optimizers import Adam
 import uuid
+from sklearn.preprocessing import MinMaxScaler
 
 
 print('TensorFlow:', tf.__version__)
@@ -32,6 +33,10 @@ model = load_model(filepath=path, custom_objects={'loss': loss})
 model.load_index(path)
 #model.compile(optimizer=Adam(lr), loss=loss)
 model.index_summary()
+data_transformer = MinMaxScaler()
+raw_data = pd.read_csv('Verified_artists.csv')
+raw_data.drop(columns=['identity','Song_Name'], inplace=True)
+data_transformer.fit(raw_data)
 data_transformer = joblib.load(scaler_path)
 app = FastAPI()
 
