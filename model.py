@@ -98,7 +98,9 @@ def predict(x_display, song_names):
     nns = model.lookup(x_display, k=num_neighboors)
     nns_mapped = {}
     for idx, x in enumerate(nns):
-        nns_mapped[song_names[idx]] =  {"Percentage_Match" :1-x[0].distance,"Predicted_Artist": artist_num[x[0].label]}
+        nns_mapped[song_names[idx]] =  {"#1 Match": {"Percentage_Match" :1-x[0].distance,"Predicted_Artist": artist_num[x[0].label]},
+                                        "#2 Match": {"Percentage_Match" :1-x[1].distance,"Predicted_Artist": artist_num[x[1].label]},
+                                        "#3 Match": {"Percentage_Match" :1-x[2].distance,"Predicted_Artist": artist_num[x[2].label]}}
     return nns_mapped
 
 
